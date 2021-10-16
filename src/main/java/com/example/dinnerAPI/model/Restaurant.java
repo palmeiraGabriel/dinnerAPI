@@ -23,9 +23,9 @@ public class Restaurant {
 	@Column(name="ADDRESS")
     private String address;
 
-    public ArrayList<Integer> peanutScores;
-    public ArrayList<Integer> eggScores;
-    public ArrayList<Integer> dairyScores;
+    private ArrayList<Integer> peanutScores;
+    private ArrayList<Integer> eggScores;
+    private ArrayList<Integer> dairyScores;
 
     private ArrayList<Double> averages;
 
@@ -52,7 +52,28 @@ public class Restaurant {
 		this.address = address;
 	}
 
+	public ArrayList<Integer> getPeanutScores() {
+		return peanutScores;
+	}
 
+	public ArrayList<Integer> getEggScores() {
+		return eggScores;
+	}
+
+	public ArrayList<Integer> getDairyScores() {
+		return dairyScores;
+	}
+
+	public void addEggScore(Integer s){
+		this.eggScores.add(s);
+	}
+
+	public void addDairyScore(Integer s){
+		this.dairyScores.add(s);
+	}
+	public void addPeanutScore(Integer s){
+		this.peanutScores.add(s);
+	}
 
 	public OptionalDouble getPeanutAverage() {
 		if( peanutScores == null){
