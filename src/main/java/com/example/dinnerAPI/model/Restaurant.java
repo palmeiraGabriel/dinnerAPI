@@ -15,6 +15,7 @@ public class Restaurant {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@OneToOne(mappedBy = "idRestaurant")
 	private Long id;
 
 	@Column(name="NAME")
